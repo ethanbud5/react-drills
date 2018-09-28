@@ -1,18 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      input:"",
+      array:["chicken","cow","pineapples","pig","dino"]
+    }
+    this.inputChange = this.inputChange.bind(this)
+  }
+  inputChange(event){
+    let {name,value} = event.target;
+    this.setState({
+      [name]:value
+    })
+  }
   render() {
+    let newArray = []
+    this.state.array.map((item,i)=>{
+      if(item.includes(this.state.input)){
+        return newArray.push(<h2>{item}</h2>);
+      }
+      else{
+        return false;
+      }
+    })
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <input type="text" name="input" onChange={this.inputChange}/>
+        {newArray}
       </div>
     );
   }
