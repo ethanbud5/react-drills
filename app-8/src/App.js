@@ -33,9 +33,6 @@ class App extends Component {
           <h2>Name: {this.state.planet.name}</h2>
           <h4>Population: {this.state.planet.population}</h4>
           <h4>Climate: {this.state.planet.climate}</h4>
-          <div>
-            <h2>Residents of {this.state.planet.name}</h2>
-          </div>
         </div>
       </div>
     );
