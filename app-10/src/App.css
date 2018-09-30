@@ -22,3 +22,42 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.employee-list{
+  height: 100px;
+  width:80vw;
+  background: rgb(206,206,206);
+  border-radius: 4px;
+  margin:auto;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color:black;
+}
+.employee-list:hover, .employee-list:active {
+  background-color: rgb(82, 74, 74);
+  color: white;
+}
+.employee-list>p{
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding-top:30px;
+}
+a{
+  text-decoration: none
+}
+.info-box{
+  width:600px;
+  height: 300px;
+  background: rgb(206,206,206);
+  border-radius: 4px;
+  margin:auto;
+  text-align: left;
+  font-size: 18px
+}
+.info-name{
+  font-size: 35px;
+  text-align: center;
+  padding-top:10px
+}
+li{
+  margin:10px;
+}
